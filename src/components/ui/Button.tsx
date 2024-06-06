@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 interface IProps {
   className?: string;
-  onClick: () => void;
+  onClick?: () => void;
   children?: ReactNode;
 }
 

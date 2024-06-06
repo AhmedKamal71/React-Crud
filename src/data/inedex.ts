@@ -1,4 +1,4 @@
-import { IProduct } from "../interfaces/Index";
+import { IFormInput, IProduct } from "../interfaces/Index";
 import { v4 as uuid } from "uuid";
 
 export const products: IProduct[] = [
@@ -122,5 +122,44 @@ export const products: IProduct[] = [
       imageLink:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfr-MUbqwDFbKfN5FBxrvaKmH6TLnVCSafccoeR7Fy9POMx3Ufwg9NIVo7fAtQaecP-5U&usqp=CAU",
     },
+  },
+];
+
+export const formInputs: IFormInput[] = [
+  {
+    label: "Title",
+    type: "text",
+    name: "title",
+    id: "title",
+  },
+  {
+    label: "Price",
+    type: "text",
+    name: "price",
+    id: "price",
+  },
+  {
+    label: "Description",
+    type: "text",
+    name: "description",
+    id: "description",
+  },
+  {
+    label: "Image Link",
+    type: "text",
+    name: "imageLink",
+    id: "imageLink",
+  },
+  {
+    label: "Image Alt",
+    type: "text",
+    name: "imageAlt",
+    id: "imageAlt",
+  },
+  {
+    label: "Category",
+    type: "text",
+    name: "category",
+    id: "category",
   },
 ];

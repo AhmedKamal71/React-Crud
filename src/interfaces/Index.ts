@@ -11,3 +11,10 @@ export interface IProduct {
     imageLink: string;
   };
 }
+
+export interface IFormInput {
+  label: string;
+  type: string;
+  name: string;
+  id: string;
+}

@@ -2,6 +2,7 @@
 import { textSlicer } from "../functions/functions";
 import { IProduct } from "../interfaces/Index";
 import Image from "./Image";
+import Button from "./ui/Button";
 
 interface IProps {
   product: IProduct;
@@ -38,12 +39,12 @@ function ProductCard({ product }: IProps) {
         <span className="w-4 h-4 rounded-full bg-yellow-600 inline-block" />
       </div>
       <div className="flex space-x-2 items-center justify-around">
-        <button className="rounded-md bg-red-600 text-center text-white w-36 h-8 my-4">
+        <Button className="rounded-md bg-red-600 text-center text-white w-36 h-8 my-4">
           Delete
-        </button>
-        <button className="rounded-md bg-blue-600 text-center text-white w-36 h-8 my-4">
+        </Button>
+        <Button className="rounded-md bg-blue-600 text-center text-white w-36 h-8 my-4">
           Show
-        </button>
+        </Button>
       </div>
     </div>
   );

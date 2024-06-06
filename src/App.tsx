@@ -3,9 +3,10 @@
 import { useState } from "react";
 import ProductCard from "./components/ProductCard";
 import Modal from "./components/ui/Modal";
-import { products } from "./data/inedex";
-import { IProduct } from "./interfaces/Index";
+import { formInputs, products } from "./data/inedex";
+import { IFormInput, IProduct } from "./interfaces/Index";
 import Button from "./components/ui/Button";
+import Input from "./components/ui/Input";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,16 @@ function App() {
   const productsList = products.map((product: IProduct) => (
     <ProductCard key={product.id} product={product} />
   ));
+
+  const renderFormInputs = formInputs.map((input: IFormInput) => (
+    <div key={input.id} className="flex flex-col">
+      <label htmlFor={input.id} className="font-bold">
+        {input.label}
+      </label>
+      <Input type={input.type} id={input.id} name={input.name} />
+    </div>
+  ));
+
   return (
     <>
       <div>
@@ -43,6 +54,7 @@ function App() {
         isOpen={isOpen}
         title="Create Product"
       >
+        {renderFormInputs}
         <div className="flex space-x-3 justify-center">
           <Button
             onClick={openModal}
