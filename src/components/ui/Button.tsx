@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 interface IProps {
   className?: string;
   onClick?: () => void;
+  // onSubmit?: (e: FormEvent<HTMLFormElement>) => void;
   children?: ReactNode;
 }
 

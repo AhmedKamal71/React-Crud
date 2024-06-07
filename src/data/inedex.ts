@@ -156,10 +156,10 @@ export const formInputs: IFormInput[] = [
     name: "imageAlt",
     id: "imageAlt",
   },
-  {
-    label: "Category",
-    type: "text",
-    name: "category",
-    id: "category",
-  },
+  // {
+  //   label: "Category",
+  //   type: "text",
+  //   name: "category",
+  //   id: "category",
+  // },
 ];

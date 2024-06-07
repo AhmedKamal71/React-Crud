@@ -22,11 +22,13 @@ function ProductCard({ product }: IProps) {
       <div className="flex flex-row justify-between mb-2 items-center">
         <span className="mx-2 text-sm">${price}</span>
         <span className="mr-2">
-          <Image
-            imageLink={category.imageLink}
-            imageAlt={imageAlt}
-            className="w-7 h-7 rounded-full"
-          />
+          {category && (
+            <Image
+              imageLink={category.imageLink}
+              imageAlt={imageAlt}
+              className="w-7 h-7 rounded-full"
+            />
+          )}
         </span>
       </div>
       <div>
@@ -39,10 +41,10 @@ function ProductCard({ product }: IProps) {
         <span className="w-4 h-4 rounded-full bg-yellow-600 inline-block" />
       </div>
       <div className="flex space-x-2 items-center justify-around">
-        <Button className="rounded-md bg-red-600 text-center text-white w-36 h-8 my-4">
+        <Button className="rounded-md bg-red-600 text-center text-white w-36 h-8 my-4 hover:bg-red-500">
           Delete
         </Button>
-        <Button className="rounded-md bg-blue-600 text-center text-white w-36 h-8 my-4">
+        <Button className="rounded-md bg-blue-600 text-center text-white w-36 h-8 my-4 hover:bg-blue-500">
           Show
         </Button>
       </div>
